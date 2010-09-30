@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='kokoonn'>
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name='com.google.gwt.user.User'/>
+
+  <!-- Inherit the default GWT style sheet.  You can change       -->
+  <!-- the theme of your GWT application by uncommenting          -->
+  <!-- any one of the following lines.                            -->
+  <inherits name='com.google.gwt.user.theme.standard.Standard'/>
+  <!-- <inherits name='com.google.gwt.user.theme.chrome.Chrome'/> -->
+  <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
+
+  <!-- Other module inherits                                      -->
+  <inherits name='wu.WebUtils'/>
+  <inherits name="com.google.gwt.maps.GoogleMaps" />
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.kokoonn.client.Kokoonn'/>
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  
+  <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjAUuFEfxAsO5BVcFuzrZJBQ1usn6vCMm9143mqV4dAdeZjpIqBQSYfcwfnfRPg48BoReapCyDpMvpg" />
+ 
+</module>
