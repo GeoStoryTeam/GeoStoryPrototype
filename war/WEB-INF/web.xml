@@ -8,17 +8,17 @@
   <!-- Servlets -->
   <servlet>
     <servlet-name>geoServlet</servlet-name>
-    <servlet-class>com.kokoonn.server.GeoStoryServerImpl</servlet-class>
+    <servlet-class>com.trajestory.server.GeoStoryServerImpl</servlet-class>
   </servlet>
   
   <servlet-mapping>
     <servlet-name>geoServlet</servlet-name>
-    <url-pattern>/kokoonn/geo</url-pattern>
+    <url-pattern>/trajestory/geo</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>Kokoonn.html</welcome-file>
+    <welcome-file>Trajestory.html</welcome-file>
   </welcome-file-list>
 
 </web-app>
