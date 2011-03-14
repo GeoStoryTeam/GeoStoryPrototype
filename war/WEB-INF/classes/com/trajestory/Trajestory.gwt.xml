@@ -2,7 +2,7 @@
 <module rename-to='trajestory'>
   <!-- Inherit the core Web Toolkit stuff.                        -->
   <inherits name='com.google.gwt.user.User'/>
-
+  <inherits name="com.google.gwt.maps.GoogleMaps" />
   <!-- Inherit the default GWT style sheet.  You can change       -->
   <!-- the theme of your GWT application by uncommenting          -->
   <!-- any one of the following lines.                            -->
@@ -12,13 +12,12 @@
 
   <!-- Other module inherits                                      -->
   <inherits name='wu.WebUtils'/>
-  <inherits name="com.google.gwt.maps.GoogleMaps" />
   <!-- Specify the app entry point class.                         -->
   <entry-point class='com.trajestory.client.Trajestory'/>
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
   
+  
   <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAjAUuFEfxAsO5BVcFuzrZJBQ1usn6vCMm9143mqV4dAdeZjpIqBQSYfcwfnfRPg48BoReapCyDpMvpg" />
- 
 </module>

@@ -1,0 +1,2 @@
+serviceClass: com.trajestory.client.GeoStoryServer
+path: 243FF55FC42FF9A1D7F90DB8E8465540.gwt.rpc

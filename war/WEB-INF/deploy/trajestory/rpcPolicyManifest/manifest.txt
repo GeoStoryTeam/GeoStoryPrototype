@@ -1,0 +1,3 @@
+# Module trajestory
+# RPC service class, partial path of RPC policy file
+com.trajestory.client.GeoStoryServer, 243FF55FC42FF9A1D7F90DB8E8465540.gwt.rpc

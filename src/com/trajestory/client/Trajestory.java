@@ -1,22 +1,21 @@
 package com.trajestory.client;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import wu.events.WEvent;
 import wu.events.WHandler;
+import wu.geostory.GeoStory;
+import wu.geostory.GeoStoryItem;
 
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.json.client.JSONObject;
 import com.google.gwt.json.client.JSONParser;
 import com.google.gwt.json.client.JSONValue;
-import com.google.gwt.user.client.Window;
+import com.google.gwt.maps.client.Maps;
 import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.google.gwt.user.client.ui.VerticalPanel;
-import wu.geostory.GeoStory;
-import wu.geostory.GeoStoryItem;
 
 /**
  * Entry point classes define <code>onModuleLoad()</code>.
@@ -30,11 +29,15 @@ public class Trajestory implements EntryPoint {
 	private final GeoStoryServerAsync facade = GWT
 	.create(GeoStoryServer.class);
 
-	/**
-	 * This is the entry point method.
-	 */
-	public void onModuleLoad() {
 
+	public void onModuleLoad() {
+		/*
+		 * Asynchronously loads the Maps API.
+		 *
+		 * The first parameter should be a valid Maps API Key to deploy this
+		 * application on a public server, but a blank key will work for an
+		 * application served from localhost.
+		 */
 		RootPanel root = RootPanel.get();
 		root.setSize("100%", "100%");
 		{
@@ -66,12 +69,10 @@ public class Trajestory implements EntryPoint {
 					@Override
 					public void onEvent(final WEvent<String> elt) {
 						facade.pullItems(elt.getElement(), null, null, new AsyncCallback<List<String>>(){
-
 							@Override
 							public void onFailure(Throwable caught) {
 								GWT.log("Pull item failure");
 							}
-
 							@Override
 							public void onSuccess(List<String> result) {
 								GWT.log("Pull success for "+ elt.getElement());
@@ -84,9 +85,7 @@ public class Trajestory implements EntryPoint {
 								}
 								geostory.getTypes().centerEvent.shareEvent(null);
 							}});
-						
 					}});
-				
 				geostory.setSize("100%", "100%");
 				tabs.add(geostory);	
 			}
